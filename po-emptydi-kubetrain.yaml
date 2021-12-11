@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: po-emptydir-005
+spec:
+  containers:
+  - name: ctr-emptydir
+    image: nginx
+    volumeMounts:
+    - name: vol-emptydir
+      mountPath: /mnt/
+  volumes:
+  - name: vol-emptydir
+    emptyDir: {}
+...

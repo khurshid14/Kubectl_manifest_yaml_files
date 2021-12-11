@@ -1,0 +1,10 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: ingress-kubetrain
+spec: 
+  backend: 
+    serviceName: svc-np-kubetrain
+    servicePort: 8080
+...

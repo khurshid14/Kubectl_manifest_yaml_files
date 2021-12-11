@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:  
+  name: deploy-lb-007
+spec:
+  template:
+    metadata:
+      labels:
+        tag: label-kubetrain
+    spec:
+      containers:
+      - name: ctr-kubetrain
+        image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      tag: label-kubetrain      
+...

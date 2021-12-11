@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-006
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      tag: lable-kubetrain
+  template:
+    metadata:
+      labels:
+        tag: lable-kubetrain
+    spec:
+      containers:
+      - name: ctr-httpd
+        image: httpd
+...

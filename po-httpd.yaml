@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-http
+spec:
+  containers:
+  - name: pod-container
+    image: crais/session-001:v1
+...

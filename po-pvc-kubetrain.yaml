@@ -1,0 +1,17 @@
+---
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: po-pvc-kubetrain
+spec:
+  volumes:
+    - name: vol-pvc-kubetrain
+      persistentVolumeClaim:
+        claimName: pvc-kubetrain
+  containers:
+    - name: ctr-pvc-kubetrain
+      image: nginx
+      volumeMounts:
+      - mountPath: "/usr/share/nginx/html"
+        name: vol-pvc-kubetrain
+...
